@@ -1,13 +1,25 @@
 img {
     display: block;
     margin: 0 auto;
+    width: 30%;
 }
 h1 {
     text-align: center;
+    color: white;
 }
 h1 p {
     text-align: center;
 }
 body {
+    text-align: center;
     background-color: pink;
+}
+h1:hover {
+    color: black;
+}
+main p {
+    color: white;
+}
+header p {
+    color: white;
 }
