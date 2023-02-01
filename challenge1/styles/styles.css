@@ -1,0 +1,19 @@
+#header {
+    width: 100%;
+}
+footer {
+    color: grey;
+    background-color: grey;
+}
+#desk {
+    width: 200px;
+    margin: left;
+}
+#graphic {
+    width: 200px;
+    margin: 0 auto;
+}
+#person {
+    width: 200px;
+    margin: right;
+}
