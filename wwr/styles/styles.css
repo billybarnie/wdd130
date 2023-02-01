@@ -91,6 +91,7 @@ footer a {
 }
 .book {
     color: black;
+    padding: 15px 30px;
 }
 h2 {
     margin: 0;
@@ -107,4 +108,3 @@ h2 {
 main section img {
     box-sizing: border-box;
 }
-
