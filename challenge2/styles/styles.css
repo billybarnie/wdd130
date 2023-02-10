@@ -1,0 +1,30 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    font-size: 250px;
+    float: left;
+    margin-top: -800px;
+    margin-left: 200px;
+}
+
+h2 {
+    text-align: right;
+    margin-top: -450px;
+    margin-right: 325px;
+    font-size: 100px;
+    color: rgb(121, 5, 5);
+}
+#cherry {
+    float: left;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+#grey_box {
+    margin-left: 950px;
+    padding: 26%;
+    background-color: grey;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
