@@ -155,7 +155,7 @@
   /* This is the parent of the activity 6 boxes. */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  height: 900px;
+  height: 1000px;
 }
 .red6 {
   width: 100%; 
