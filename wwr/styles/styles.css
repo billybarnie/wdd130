@@ -12,6 +12,7 @@ nav a {
 }
 #home-title, #secondary {
     text-align: center;
+    color: #b3d89c;
 }
 .buttons-box {
     text-align: center;
@@ -77,7 +78,7 @@ footer p a:hover{
 .book {
     font-family: Sofia San Extra Condensed, Helvetica, sans-serif;
     text-align: center;
-    color: black;
+    color: #77a6b6;
     text-decoration: none;
     font-size: 18px;
     padding: 15px 30px;
