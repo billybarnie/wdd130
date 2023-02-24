@@ -9,10 +9,6 @@ nav a {
     text-decoration: none;
     padding: 35px;
 }
-.button-box {
-    text-align: center;
-    color: #b88b4a;
-}
 main section {
     text-align: center;
 }
@@ -29,15 +25,6 @@ header {
 }
 #anon-img {
     width: 100%;
-}
-.book {
-    text-align: center;
-    color: #533e2d;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 15px 30px;
-    margin-top: 50px;
-    border-radius: 5px;
 }
 .home-grid {
     display: grid;
