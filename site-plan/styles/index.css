@@ -104,7 +104,7 @@ footer a {
     text-decoration: none;
 }
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+    #Anonymous, .home-grid {
         display: block;
         height: auto;
     }
