@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Serif&display=swap');
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+nav a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 35px;
+}
+.button-box {
+    text-align: center;
+    color: #b88b4a;
+}
+main section {
+    text-align: center;
+}
+body {
+    background-color: white;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #a27035;
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+#anon-img {
+    width: 100%;
+}
+.book {
+    text-align: center;
+    color: #533e2d;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.home-grid {
+    display: grid;
+    grid-template-columns: 10fr;
+}
+.danger-img {
+    width: 100%;
+}
+.dangers {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.chat {
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+.payment {
+    grid-column: 9/11;
+    grid-row: 2/3;
+    height: 100%;
+}
+.info {
+    line-height: 1.5em;
+    padding: 35px;
+    grid-column: 4/8;
+    grid-row: 6/7;
+    background-color: #a27035;
+    box-shadow: 5px 5px 10px #b88b4a;
+    color:#533e2d
+}
+footer {
+    background-color: #a27035;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.book:hover, .support:hover {
+    background-color: #b88b4a;
+}
+nav a:hover {
+    background-color: #b88b4a;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+.danger-img:hover {
+    opacity: .6;
+    transform: scale(1.1);
+}
+footer p a:hover{
+    text-decoration: underline;
+}
+footer a {
+    text-align: center;
+    color: #fcfbfb;
+    text-decoration: none;
+}
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #Anonymous {
+        margin-top: 0;
+    }
+    .dangers, .chat, .payment { 
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .info {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer {
+        margin-top: 25px;
+    }
+}
