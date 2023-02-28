@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sofia+Sans+Extra+Condensed:ital@1&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -22,6 +23,7 @@ main section {
     text-align: center;
 }
 body {
+    font-family: Sofia San Extra Condensed, Helvetica, sans-serif;
     background-color: white;
     font-size: 22px;
     margin: 0;
