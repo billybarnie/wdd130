@@ -1,0 +1,10 @@
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+#hero-img {
+    float: left;
+}
+#hero-img1 {
+    float: right;
+}

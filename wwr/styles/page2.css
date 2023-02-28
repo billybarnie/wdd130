@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Serif&display=swap');
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.support {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+nav a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 35px;
+}
+main section {
+    text-align: center;
+}
+body {
+    background-color: white;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #4d7298;
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+#anon-img {
+    width: 100%;
+}
+.home-grid {
+    display: grid;
+    grid-template-columns: 10fr;
+    margin-top: 100px;
+}
+.danger-img {
+    width: 100%;
+    border: 10px solid #4d7298;
+    margin-top: 10px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px;
+}
+.dangers {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-left: 30px;
+}
+.chat {
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+.payment {
+    grid-column: 8/10;
+    grid-row: 2/3;
+    height: 100%;
+    margin-right: 50px;
+}
+.info {
+    line-height: 1.5em;
+    padding: 35px;
+    grid-column: 4/8;
+    grid-row: 6/7;
+    background-color: #4d7298;
+    box-shadow: 5px 5px 10px #77a6b6;
+    color: white;
+}
+footer {
+    background-color: #4d7298;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.support:hover {
+    background-color: #77a6b6;
+}
+nav a:hover {
+    background-color: #77a6b6;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+.danger-img:hover {
+    opacity: .6;
+    transform: scale(1.1);
+}
+footer p a:hover{
+    text-decoration: underline;
+}
+footer a {
+    text-align: center;
+    color: #fcfbfb;
+    text-decoration: none;
+}
+@media screen and (max-width: 900px) {
+    #Anonymous, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #Anonymous {
+        margin-top: 0;
+    }
+    .dangers, .chat, .payment { 
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .info {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer {
+        margin-top: 25px;
+    }
+}
