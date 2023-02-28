@@ -74,7 +74,7 @@ header {
     color: white;
 }
 footer {
-    background-color: #4d7298;
+    background-color: #77a6b6;
     padding: 25px 50px;
     margin-top: 200px;
     display: flex;
@@ -87,10 +87,10 @@ footer {
     align-self: center;
 }
 .support:hover {
-    background-color: #77a6b6;
+    background-color: #b3d89c;
 }
 nav a:hover {
-    background-color: #77a6b6;
+    background-color: #b3d89c;
 }
 nav {
     display: flex;
