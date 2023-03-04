@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Serif&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -18,6 +20,7 @@ p {
     padding-left: 20px;
     padding-right: 70px;
     font-size: 27px;
+    font-family: 'Noto Serif', serif;
 }
 h1 {
     padding-top: 20px;
@@ -25,6 +28,7 @@ h1 {
     font-size: 44px;
 }
 body {
+    font-family: 'Gloock', serif;
     background-color: white;
     font-size: 22px;
 }
@@ -54,7 +58,7 @@ nav {
 footer {
     background-color: #a27035;
     padding: 25px 50px;
-    margin-top: 200px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
