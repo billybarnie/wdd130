@@ -21,11 +21,13 @@ p {
     padding-right: 70px;
     font-size: 27px;
     font-family: 'Noto Serif', serif;
+    color: #533E2D;
 }
 h1 {
     padding-top: 20px;
     margin-left: 970px;
     font-size: 44px;
+    color: #533E2D;
 }
 body {
     font-family: 'Gloock', serif;
@@ -63,7 +65,7 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
-footer p a:hover{
+footer p1 a:hover{
     text-decoration: underline;
 }
 footer a {
