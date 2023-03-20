@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Noto+Serif&display=swap');
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+#chat-img {
+    float: left;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+#list {
+    float: right;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+#degree {
+    float: right;
+    padding-top: 30px;
+}
+#rules {
+    font-family: 'Noto-serif', serif;
+    font-size: 27px;
+    color: #533E2D;
+}
+body {
+    font-family: 'Gloock', serif;
+    background-color: white;
+    font-size: 22px;
+}
+header {
+    background-color: #A27035;
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+nav a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 35px;
+}
+nav a:hover {
+    background-color: #b88b4a;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+footer {
+    background-color: #a27035;
+    padding: 25px 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer p1 a:hover{
+    text-decoration: underline;
+}
+footer a {
+    text-align: center;
+    color: #fcfbfb;
+    text-decoration: none;
+}
+p { 
+    padding-left: 20px;
+    padding-right: 70px;
+    font-size: 27px;
+    font-family: 'Noto Serif', serif;
+    color: #533E2D;
+}
+h1 {
+    padding-top: 20px;
+    margin-left: 970px;
+    font-size: 44px;
+    color: #533E2D;
+}
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.chat, .work {
+    text-align: center;
+    padding: 10px;
+}
+.start, .apply {
+    text-align: center;
+    color:#533E2D;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.start:hover, .apply:hover {
+    background-color: #b88b4a;
+
+}
