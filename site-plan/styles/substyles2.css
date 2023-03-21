@@ -91,10 +91,16 @@ h1 {
     font-size: 18px;
     border-radius: 5px;
     text-decoration: none;
+    padding: 5px 15px;
 }
 .start:hover, .apply:hover {
     background-color: #b88b4a;
 
+}
+button {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
 }
 .modal {
     display: none; /* Hidden by default */
