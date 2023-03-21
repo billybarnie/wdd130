@@ -73,3 +73,22 @@ footer a {
     color: #fcfbfb;
     text-decoration: none;
 }
+@media screen and (max-width: 900px) {
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #background {
+        display: none;
+    }
+    footer {
+        margin-top: 25px;
+    }
+    h1 {
+        text-align: left;
+        margin-left: -700px;
+    }
+  }
