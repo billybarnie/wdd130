@@ -65,8 +65,11 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
-footer p1 a:hover{
+footer p a:hover{
     text-decoration: underline;
+}
+footer p {
+    font-family: 'Gloock', serif;
 }
 footer a {
     text-align: center;
