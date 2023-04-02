@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decisions P2</title>
+</head>
+<body>
+    <h2>Testing Multiple Conditions</h2>
+    <sections>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=IBOHc87yFYw&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=24">Complex Condition Checks</a>
+        </nav>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=Iui6K2STtbA&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=25">Demo: Complex Conditions</a>
+        </nav>
+    </sections>
+    <p>As shown, you can combine two conditions with "and" and "or":</p>
+    <img class="and-or" src="images/and-or.png" alt="and or syntax image">
+    <p>And you can mix and match any expressions that evaluate to true:</p>
+    <img class="true" src="images/true.png" alt="all conditions are true syntax images">
+    <p>Just as mathematical operators have precedence rules where "*" happens before "+", the "and" condition takes precedence over the "or" condition, so if you want to mix them and have the or condition happen first, you need to use parentheses.</p>
+    <img class="or statement" src="images/or.png" alt="image of or syntax">
+    <p>Sometimes, these can get a little confusing, so it os a godd idea to use parentheses in complicated expressions, to make it clear what you intend to happen.</p>
+    <h2>Testing Multiple Similar Conditions</h2>
+    <p>It is common to want to test the same variable for two conditions, or to test two variables against the same condition. In these cases, you may be tempted to leave part out, but this will not work, anytime you use operators like ">" or "=="
+        , you must provide both left and a right hand side for it.
+    </p>
+    <img class="equals-equals" src="images/equals-equals.png" alt="equals equals statment image">
+    <img class="shot" src="images/scotty.png" alt="or and example image">
+    <h2>True And False Values</h2>
+    <p>In addition to comparing against other varaibles, you can also set a variable itself to be a "True" or "False". To this point, we have learned about the variable types of int, float, and string. Variables that are either true or false are a new
+        data type called Boolean variables (names after a mathematician, George Boole).
+    </p>
+    <p>You can set a boolean variable directly, such as "is_hot = True" or "is_hot = False". Notice that you must always use a capital T on True and a capital F on False.</p>
+    <p>Because these are variables are already either true of flase, you don't need to compare them against another value. Examples below:</p>
+    <img class="true or false" src="images/truefalse.png" alt="true false example 1">
+    <p>You can check if a boolean variable is not true with the "not" keyword:</p>
+    <img class="false" src="images/false.png" alt="false example image">
+    <p>Boolean variables are typically named with words that indicate that it will only have two values, and help you understand what true means. For example, if you want to have a boolean variable that determines whether someone is an adult, you would 
+        typically choose a name of "is_adult" rather than "age" or even "adult". Common boolean variable names "is_xxx, has_xxx, can_xxx," etc.
+    </p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops P1</title>
+</head>
+<body>
+    <h2>Loops P1</h2>
+    <p>There are two tpyes of loops in Python, "while" loops and "for" loops.</p>
+    <p>Watch the following videos for more information:</p>
+    <sections>
+        <nav>
+            <a href="https://video.byui.edu/media/t/1_5faplwse">Introduction to loops</a>
+        </nav>
+    </sections>
+    <p>A "while" loop continues while something is still true, or as long as it's true, or stated another way, "until it's no longer true."</p>
+    <p>For example, you might keep asking the user for a number as long as, or while they keep numbers under 10, and stop as soon as they enter one that is larger than that:</p>
+    <img class="while" src="images/while.png" alt="while loop example 1 image">
+    <p>The output of this program could be something like the following:</p>
+    <img class="while-output" src="images/while-output.png" alt="while output of example one image">
+    <p>This also works when the computer is updating a value, rather than getting input from the user. The following program counts up to 5 and then stops:</p>
+    <img class="while-less" src="images/while-less.png" alt="while less example image">
+    <p>The output of this program could be something like the following:</p>
+    <img class="less-output" src="images/less-output.png" alt="while less output image">
+    <h2>Declaring Variables Before They Are Used</h2>
+    <p>Just like with "if" statements, any variables that will be used in the "while" expression, need to be declared and assigned values before they are referenced in that condition.</p>
+    <p>In the following example, the program will cause an error because it tries to check if number is less than 10, but the variable does not exist yet.</p>
+    <img class="bad-example" src="images/bad-example.png" alt="bad example image">
+    <p>The following example corrects the mistake by declaring the variable and setting it equal to a value prior to the loop.</p>
+    <img class="good-example" src="images/good-example.png" alt="good example image">
+    <p>In the following two examples, the mistake is corrected by assigning the variable to a value that allows the loop to run.</p>
+    <img class="ok-example" src="images/okay.png" alt="image of okay example">
+    <img class="okay" src="images/okay-example.png" alt="image of another good example">
+    <p>Notice that in the previous two examples, the variable is set to a value less than 10, so the loop will run. Technically, any number less than 10 would work (including negative numbers), but it is common practice to initialize unused integer
+        variables to "0" or "-1", to initialize strings to "", and to initialize boolean variables to "False".
+    </p>
+    <h2>Variable Scope</h2>
+    <p>Just as you need to declare a variable before the loop if you want to use it in the condition statement, variables that are first declared inside the body of a loop (or an "if" statement) should not be used after the loop. Sometimes programming 
+        languages like Python will allow this to work, but it is not considered good practice, because it can cause bugs to arise in your code that are difficult to track down.
+    </p>
+    <img class="horrible" src="images/horrible.png" alt="image of horrible example">
+    <img class="great" src="images/great.png" alt="image of a great example">
+</body>
+</html>
