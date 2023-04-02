@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable and Expressions P1</title>
+</head>
+<body>
+    <h2>Data Types</h2>
+    <p>You have already seen a type of data known as strings, which can be sequences of any kind of characters
+        (letters, numbers, symbols, spaces, etc.), such like "The book of: 1 Nephi" and "yellow puppy".
+    </p>
+    <p>A sequence of number, such as "48212", can be converted to a numeric data type and stored internally as a number;
+        otherwise, the computer doesn't distinguish numbers from a sequence of letters. Once you have converted the String
+        to a number, you can use it in mathematical formulas of expressions.
+    </p>
+    <p>See the videos below for more information:</p>
+    <nav>
+        <a href="https://www.youtube.com/watch?v=5yhn0MFLcu8&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=14">Numeric Data Types</a>
+        <a href="https://www.youtube.com/watch?v=T1j2tfZK7OI&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=15">Demo: Numbers</a>
+    </nav>
+    <h2>Using Different Data Types</h2>
+    <p>As seen in the videos, when data is stored in a variable, the computer treats it as a certain data type (such as a string
+        or an integer). You have to be conscious of these different data types when you want to mix them together, such as when 
+        you want to display a number alongside the text of a string.</p>
+    <p>The simplest way to display number alongside text, is to use a format string like so:</p>
+    <img class="format-string" src="images/format.png" alt="format">
+    <p>This sample works well, and is the preferred way to display a number in your print statement alongside text. But in order
+        to properly use different data types, you'll need a little deeper understanding of them as well as how operators like plus
+        sign work with them.
+    </p>
+    <h2>Operators And Different Data Types</h2>
+    <p>Consider the plus operator "+". When you add two strings, it glues them together, one right after the other (the technical 
+        term for this is that it concatenates them):</p>
+    <img class="concatenate" src="images/concatenate.png" alt="image of concatenate">
+    <p>On the other hand, if the data type of the variables is integer or floating point, the plus (+) operator actually performs
+        the mathematical addition:
+    </p>
+    <img class="math" src="images/math.png" alt="math">
+    <h2>Mixing Strings And Numbers</h2>
+    <p>A potential problem arises if you try to mix strings and numeric data types together. For example, trying to add a string 
+        to an integer produces the following error:
+    </p>
+    <img class="error" src="images/error1.png" alt="Example of an error">
+    <p>The computer doesn't know how to add strings to numbers, which causes an error. In this case, what you want is for the computer
+        to treat the number stored in the "apple_count" variable as a string instead of a number. It might seem obvious to you that 
+        this is the desired behavior, but the computer doesn't try to guess what you want, you must explicitly tell it when you want it
+        to convert one type of data to another.
+    </p>
+    <p>Converting data from one type to another is called type-casting, or "casting". That's just a fancy way of saying "treat it like
+         a number please". To convert data to an integer, you put "int" before it, and then wrap it in parentheses, like this: 
+         "int(data_type)". The same is true for converting it to a floating number with the term "float()" or string with "str()" and 
+         so on.
+    </p>
+    <p>Example below shows this:</p>
+    <img class="intger" src="images/intexample.png" alt="integer made">
+    <p>Whenever you get input from the user using "input", it will be a string by default:</p>
+    <img class="input" src="images/input.png" alt="syntax of input wrap">
+    <p>Similar to the last example, you can combine the "input" and "int" commands into one line:</p>
+    <img class="combine" src="images/combine.png" alt="combines input with int command">
+    <h2>Expressions And Mathematical Operations</h2>
+    <p>Once you have numeric values stored in variables, you can perform a variety of complex mathematical operations. The following are 
+        common mathematical operators in Python:
+    </p>
+    <img class="operations" src="images/operators.png" alt="list of operators">
+    <p>These operators follow standard mathematical orders of operation (where "*" happens before "+"), but you can force it to evaluate 
+        using parentheses. For example, "(3 + 4) * 2" will perform the addition first, and then multiply the result by 2.
+    </p>
+
+</body>
+</html>
