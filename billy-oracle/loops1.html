@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops P2</title>
+</head>
+<body>
+    <h2>Looping Through A List</h2>
+    <sections>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=LrOAl8vUFHY&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=28">Loops</a>
+        </nav>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=rAvD-6MpTw4&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=29">Demo: Loops</a>
+        </nav>
+    </sections>
+    <p>As seen in the videos above, there are a few different ways you can tell the computer to loop through code over and over again.</p>
+    <p>One example of loop, is to loop, or iterate, through each item of a collection or a list, one at a time. You will learn about lists in more detail in future lessons, but the following shows an example of looping through a list of words to print
+        them on the screen one at a time:
+    </p>
+    <img class="list" src="images/list.png" alt="example of a list">
+    <p>The output of this code is:</p>
+    <img class="list-output" src="images/list-output.png" alt="example of list output">
+    <p>Just as with "if" statement, the colon ":" at the end of your "for" statement tells the computer that there is a block of code coming. Then, you indent all the code that is in the block. The code that is indented is the code that will be run on 
+        each item.
+    </p>
+    <p>When looping through each item, you can do much more with it than simply printing it out. You could include an "if" statement, to check if it meets certain conditions, and then use it in a math expression, or anything else.
+    </p>
+    <p>When you type "for item in items:", the list variable, items must already exist, but the variable for each individual element of the list, in this case item, is defined right in that statement. In short, it's saying, "Go through each element of this 
+        list and assign a new variable item to be the value each time through."
+    </p>
+    <h2>Looping Through Numbers</h2>
+    <p>It's very common in programming to want to loop through a series of numbers. You could create a list of numbers, just liek the list of words in the last example, like this:</p>
+    <img class="number-list" src="images/number-list.png" alt="image of a number list">
+    <p>But this could get really long if you wanted to work with a large amount of numbers, so there is an easier way, using "range".</p>
+    <p>You can create the same list of numbers like this:</p>
+    <img class="range" src="images/ranges.png" alt="image of a range">
+    <p>This creates a list of numbers for you that starts at "0" and goes up until (but not including) "10".</p>
+    <p>You could assign this list to a variable like "numbers" as in the example above, and then loop through each number in the list of numbers, but it is more common to just put the "range" code right in your for loop like so:</p>
+    <img class="for-range" src="images/for-range.png" alt="image of a range in a for-loop">
+    <p>The output is as follows:</p>
+    <img class="range-output" src="images/range-output.png" alt="output range in the for loop">
+    <p>In programming languages we usually start counting at 0 instead of 1. There are reasons for this, but more than anything, it's just something you'll have to get use to.</p>
+    <p>The "range" function gives you other options like starting at a different number, or counting by 3's, or even going backwards. In all of these cases, the idea of looping through the values is the same. You start with the first one and then continue 
+        on, one by one, through the list.
+    </p>
+    <p>To start with a different number, you provide two values to the "range" function. If you provide two numbers, it will start with the first one and continue up until (but not including) the second one.</p>
+    <p>If you provide three values to the "range" function, it will use the third number as the "step size" or in other words the number to count by.</p>
+    <img class="range-values" src="images/range-values.png" alt="range of values">
+    <h2>Loops Within Loops</h2>
+    <p>A loop will blindly repeat any code that is inside its body. That code could include if statement, mathematics, new variable definitions, or anything else-including other loops!</p>
+    <p>The following example displats the number 0-4:</p>
+    <img class="range-5" src="images/range-5.png" alt="range 5 example">
+    <p>Output:</p>
+    <img class="range-5-output" src="images/range-5-output.png" alt="range 5 output image">
+    <p>We can add a second, inner loop, that for each one of those displays the numbers 10-12 (with two - characters in front to make it easier to visualize).</p>
+    <img class="inner-loop" src="images/inner-loop.png" alt="example of an inner loop">
+    <p>Output:</p>
+    <img class="inner-loop-output" src="images/inner-loop-output.png" alt="output of the inner loop">
+    <p>Notice how the inner loop is run every time the outer loop displays it's number. Inner loops can be very helpful in iterating through a two-dimensional structure, such as the pixels in an image.</p>
+    <p>While we generally prefer variable names that are more descriptie than a single letter, if the variable will only be used for counting in a simple loop it is considered standard to use i. Then, if you have an inner loop, you use j, and a third inner loop would be k.
+         If you have more than three loops you should consider if there is a simpler way to accomplish your task, and if there really isn't, you should at least move to more descriptive variable names at that point.
+    </p>
+    <h2>Looping Through Strings</h2>
+    <p>You can iterate through each letter of a string using either style of for-loop. For example, you can loop through each letter one at a time with the following code:</p>
+    <img class="brigham" src="images/brigham.png" alt="another example">
+    <p>Output:</p>
+    <img class="brigham-output" src="images/brigham-output.png" alt="example output">
+    <p>Just as before, there is nothing special about the variable name "letter", any name could have been used, but the choice of "letter" helps us keep the code nice and easy to read.</p>
+    <h2>Accessing Letters By Position</h2>
+    <p>Sometimes you need to access a letter by its position (or index) in a string. In others words, you might want to know the third or seventh letter in a string. This will be useful when comparing letters at the same place in two strings.</p>
+    <p>You can access a specific letter in a string by using the square brackets "[]", such as "word[3]" or "word[12]". But be aware that the count starts at 0, so you will use 3 to get the fourth letter (not the third letter). The following example gets the fourth letter
+        of the name:
+    </p>
+    <img class="index" src="images/index.png" alt="the code grabs the 4th element of the word brigham">
+    <h2>Iterating Through Each Letter Using an Index</h2>
+    <p>In this case, rather than looping through letters, you can loop through the index numbers. If you knew the length of the word, you could do this as follows:</p>
+    <img class="book" src="images/book.png" alt="image of example">
+    <p>Output:</p> 
+    <img class="book-output" src="images/book-output.png" alt="image of example output">
+    <p>Then, you can use the square brackets to access the letter at that index as follows:</p>
+    <img class="number-of-letters" src="images/number-of-letters.png" alt="number of letters example">
+    <p>This code will output the following:</p>
+    <img class="number-output" src="images/number-output.png" alt="number of letters output">
+    <p>With this example, you have access to both the letter and the index at each step of the loop.</p>
+    <h2>Finding The String Length</h2>
+    <p>The previous example assumed the number of letters, or length of the string, would always be 4, but this will not work if the string has no more or fewer letters. Instead of typing the 4 directly, you cal let the computer find the length by using the "len" function. The following code shows how to use "len" to get the length of a string:</p>
+    <img class="dog-name" src="images/dog-name.png" alt="dog name example">
+    <p>The Output:</p>
+    <img class="dog-name-output" src="images/dog-name-output.png" alt="dog name output image">
+    <p>Combining the "len" function with the earlier loop is very powerful, because now you can iterate through the indexes ad letters of strings of any length as follows:</p>
+    <img class="len-function" src="images/len-function.png" alt="len function example">
+    <p>Code output as follows:</p>
+    <img class="len-function-output" src="images/len-function-output.png" alt="len function example output">
+    <h2>Lists</h2>
+    <p>Many of the examples you see with "for" loops often iterate through a list of items, including numbers in a list, or letters in a string. This naturally extends to working woth other properties of lists, such as finding the length of the word or the position of the letter.</p>
+    <h2>Python Enumerate</h2>
+    <p>Using a for loop and the length of the string is a standard way to access both the index and the letter. However, Python also has a way to access both of these variables directly using a special function called "enumerate" as shown in the following example:</p>
+    <img class="enumerate" src="images/enumerate.png" alt="example of enumerate">
+    <p>Output of example:</p>
+    <img class="enumerate-output" src="images/enumerate-output.png" alt="enumerate example output">
+    <p>This is a little different than the standard "for" loop, because it returns two variables. This function is not supported in many languages, but it is available in Python.</p>
+</body>
+</html>
