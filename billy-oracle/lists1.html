@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists P2</title>
+</head>
+<body>
+    <h2>Accessing Items In A List Via Their Index</h2>
+    <p>You can access an item in a list at a given index via the square bracket [] notation:</p>
+    <img class="bracket-notation" src="images/bracket-notation.png" alt="bracket notation example">
+    <p>Don't forget that Python, like most programming languages, starts counting at 0 for its indexes. So the first item is at index 0, and the last item in a list of 10 elements would be at index 9.</p>
+    <h2>Finding The Size Of The List</h2>
+    <p>You can find out how many elements are in a list, by using the "len" function (which is short for length) as follows:</p>
+    <img class="size" src="images/size.png" alt="size example">
+    <h2>Iterating Through a List Using An Index</h2>
+    <p>In previous examples we have seen how to iterate through each item in a list using a standard for loop. Another way to do this is to have the loop iterate through the indexes 0 through the size of the list and then access each item using the 
+        [] notation:
+    </p>
+    <img class="notate" src="images/notate.png" alt="example of list iteration with bracket notation">
+    <p>Looking a little closer at that for loop you can see that "len(books)" gets the number of items in the list, and then the "for i in range(. . .):" part iterates throught the numbers 0, 1, 2, 3, ..., up until (but not including) the size of 
+        the list. So if the list has 10 elements, this will loop through from 0-9, which are the exact indexes you want.</p>
+    <p>Typically, we avoid single letter variable names like i or j, but when it comes to using loops to iterate through numbers like this, it is very common to use "i" as the variable name. Then if you happen to have a second loop inside of it, it 
+        is common to use "j" for that variable. A third loop uses k.</p>
+    <p>If you have more than 3 loops inside one another, typically you need to examine your code a little closer to see if there is a way to simplify you problem.</p>
+    <h2>Printing Indexes</h2>
+    <p>If you want to print the index numbers next to the elements of the list as you iterate throughm, you can print the value of the "i" variable:</p>
+    <img class="i-variable" src="images/i-variable.png" alt="example of i variable being used">
+    <p>But be careful. Don't forget that the indexes will start at 0. If you want to display these numbers in a more user-friendly manner, you may need to add 1 to the variable "i" when you display it.</p>
+    <h2>Working With Parallel Lists</h2>
+    <p>Sometimes, you have a situation where you have two lists that you want to work with in parallel. For example, the first list may have the names of your friends, and the second may mave their phone numbers. If you want to iterate through and 
+        display the name and the phone number, you would not be able to use a standard loop such as "for name in names:" because you wouldn't be able to get the corresponding number.</p>
+    <p>The most common solution to this problem is to loop through the indexes that correspond to one of the lists and then you can access the item form each list at that index:</p>
+    <img class="name" src="images/name.png" alt="name example">
+    <p>Keep in mind that you have to be very careful in cases like this that the two lists do not get out of sync.</p>
+    <h2>Removing Items From A List</h2>
+    <p>There are a few different ways to remove items from a list in Python, but the easiest is to use the "pop" function to pop the item out of the list. You tell the pop function the index of the item you want to remove. If you don't give it an 
+        index, it will remove the last one:</p>
+    <img class="remove" src="images/remove.png" alt="remove example">
+    <p>When you remove an item from a certain index, all of the elements in the list that follow it will move up. In other words, if you remove the item at index 3, the item that wasat index 4 will move to 3, the one as 5 will move to 4, and so forth.</p>
+</body>
+</html>
