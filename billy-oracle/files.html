@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files P1</title>
+</head>
+<body>
+    <h2>Opeing Files</h2>
+    <p>Please feel free to watch the videos as follows:</p>
+    <sections>
+        <nav>
+            <a href="https://video.byui.edu/media/t/0_fa71thz9">Opening and Reading From Files</a>
+        </nav>
+        <nav>
+            <a href="https://video.byui.edu/media/t/0_cbxbdmv1">Splitting Strings</a>
+        </nav>
+        <nav>
+            <a href="https://video.byui.edu/media/t/0_if1c6xgs">Removing whitespace from strings</a>
+        </nav>
+        <nav>
+            <a href="https://video.byui.edu/media/t/0_1wt1gdzd">Putinng it Together: Reading Files and Parsing Strings</a>
+        </nav>
+    </sections>
+    <p>As the videos show, a file can be opened in Python with the following syntax:</p>
+    <img class="open" src="images/open.png" alt="open syntax">
+    <p>It's important to close the file after you are finished. A best practice in Python is to used the "with" syntax so that it will automatically close the file for you when your program leaves that block of code:</p>
+    <img class="close" src="images/close.png" alt="close after the file is read example">
+    <p>if the file you were reading from was called "colors.txt" and you wanted it to be saved into a variable "color_file", you would use the following:</p>
+    <img class="colorsfile" src="images/colorsfile.png" alt="example of a colors file being opened">
+    <h2>Reading Data From Files</h2>
+    <p>There are several ways to read data from files in Python. One of the most straightforward approaches is to use a "for" loop to iterate over each line, the same way you would if you were iterating through the items in a list.</p>
+    <p>Once the file has been opened, you can iterate through each line as follows:</p>
+    <img class="colorsiterate" src="images/colorsiterate.png" alt="example of iterating through colors file">
+    <h2>Parsing Strings</h2>
+    <p>Once you have loaded the data from a line in the file into a variable, you may need to clean up that line or break it up into individual pieces to use separately.</p>
+    <h2>Removing extra Whitespace</h2>
+    <p>One common thing to do is to remove any extra space at the beginnign or end of a string. This "space" can be in the form of regular spaces, tab characters, or newline characters (\n). In Python, there is built-in function named ".strip()"
+        that strips these characters off of the string as shown below:
+    </p>
+    <img class="strip" src="images/strip.png" alt="strip syntax example">
+    <p>Please note that the ".strip()" function, does not change the original string variable, but instead it generates and returns a new one that you can save into a variable.</p>
+    <h2>Splitting a String into Pieces</h2>
+    <p>Another common task with strings is to want to separate them into individual pieces. Python contains a built-in function ".split()" that can split a string up based on whatever character you define that separates the pieces.</p>
+    <p>For Example, if you wanted to split up a string using a space as the separator so that each word would be a separate variable, you could use the following:</p>
+    <img class="sentence" src="images/sentence.png" alt="split example">
+    <p>If you have another character that separates the pieces of your strings, such as a comma, you could split on that using the code ".split()".</p>
+</body>
+</html>
