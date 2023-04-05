@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>function Basics</title>
 </head>
 <body>
-    
+    <h2>Defining Functions</h2>
+    <p>Please feel freee to look at the videos below:</p>
+    <section>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=nrCAxXfRU28&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=29">Introducing Functions</a>
+        </nav>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=C9ZEGqGHXms&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=30">Demo: Functions</a>
+        </nav>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=sKW-zdYZNX4&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=31">Parameterized Functions</a>
+        </nav>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=LtKAXFRtxhQ&list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6&index=33">Demo: Parameterized Functions</a>
+        </nav>
+    </section>
+    <p>In the videos seen above, you define a function by using the "def" keyword and following your function with parentheses "()" and a colon ":" as seen below:</p>
+    <img class="def" src="images/def.png" alt="example of a def function">
+    <h2>Calling Functions</h2>
+    <p>Later in your program, you can call the function by giving its name and including the parentheses afterward:</p>
+    <img class="def-syntax" src="images/def-syntax.png" alt="image of def syntax">
+    <p>The following code demonstrates a function that displays text on the screen. Then, it is called twice later in the program:</p>
+    <img class="function-call" src="images/function-call.png" alt="image of a function being called">
+    <p>This is the output of the example shown above:</p>
+    <img class="hello-cse110" src="images/hello-cse110.png" alt="function call output">
+    <h2>Passing Parameters To Functions</h2>
+    <p>When you define a function, you can declare parameters, which are values that it receives from the place that called it. For example, consider a function "print_double" that receives a number, doubles it, and prints the result on the screen:</p>
+    <img class="double" src="images/print-double.png" alt="example of a print double function">
+    <p>Then, you can call this function and pass it any value from there as seen below:</p>
+    <img class="double-output" src="images/double-output.png" alt="double example output">
+    <h2>Returning Values</h2>
+    <p>Extending the previous example, suppose you want to have the program calculate the double value and return it, instead of printing it to the screen, in case you want to use it in further calculations. In this case, you can use the "return" statement:</p>
+    <img class="return-statement" src="images/return-statement.png" alt="example of a return statement">
+    <p>Now the value is given back to the code that called it:</p>
+    <img class="return-statement-output" src="images/return-statement-output.png" alt="return statement example output">
+    <p>The Variable "new_number" would now have a value of 8.</p>
+    <h2>Variable Scope</h2>
+    <p>Please be aware that variable names are only valid for the function they are defined in. And, you can even use the variable name in different functions for different values. This can get a little complicated and you'll see it in much more detail in future programs
+        But at this point, you need to be aware that whether you use the same variable name or not, the function will have it's own copy of the value. And you can't use it outside of the function.
+    </p>
+    <img class="variable-name" src="images/variable-name.png" alt="example">
+    <p>The same concept holds true for parameters:</p>
+    <img class="message-param" src="images/message-param.png" alt="message parameter example">
+    <p>In either of the two cases above, when you are in the function, you'll want to use the variable name "the_message" regardless of what was called down below.</p>
+    <h2>Style</h2>
+    <p>As you start to think about names for your functionsand your variables, you'll find that most often variables refer to things so it is most common to use nouns for them (price, name, response, etc.). Functions on the other hand do things or perform actions, so it 
+        is more common to use verbs for their names(print_message, get_initials, open_file, display_error).</p>
 </body>
 </html>
