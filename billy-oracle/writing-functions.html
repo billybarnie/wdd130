@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Functions</title>
+</head>
+<body>
+    <h2>What is a User-Defined Function?</h2>
+    <p>A user-defined function is a function that is not a built-in function, a standard function, or a third-party function. A user-defined function is written by a programmer as part of a program. For some students the term "user-defined function" is confusing
+         because the user of a program doesn't define the function. Instead, the programmer define user-defined functions. Perhaps a more correct term is programmer-defined function. Writing user-defined functions has several advantages, including:
+    </p>
+    <li>
+        <ul>Making your code more reusable</ul>
+        <ul>Making your code easier to understand and debug</ul>
+        <ul>Making your code easier to change and add capabilities</ul>
+    </li>    
+    <h2>Videos</h2>
+    <section>
+        <nav>
+            <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/python-for-beginners-29-of-44-introducing-functions">Introducing Functions</a>
+        </nav>
+        <nav>
+            <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/python-for-beginners-30-of-44-demo-functions">Demonstration: Functions</a>
+        </nav>
+        <nav>
+            <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/python-for-beginners-31-of-44-parameterized-functions">Parameterized Functions</a>
+        </nav>
+        <nav>
+            <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/python-for-beginners-32-of-44-demo-parameterized-functions">Demonstration: Parameterized Functions</a>
+        </nav>
+    </section>
+    <h2>How to Write a User-Defined Function</h2>
+    <p>To write a user-defined function in Python, simply type code that matches this template:</p>
+    <img class="function-value" src="images/function-value.png" alt="function value example">
+    <p>The first line of a function is called the header or signature, and it includes the following:</p>
+    <li>
+        <ul>The keyword def (which is an abbreviation of "define")</ul>
+        <ul>The function name</ul>
+        <ul>The parameter list (with the parameters separated by commas)</ul>
+    </li>
+    <p>Here is the header for a function named "draw_circle" that takes three parameters named x, y, and radius:</p>
+    <img class="radius-exam" src="images/radius-exam.png" alt="radius example">
+    <p>You could read the previous line of code as, "Define a function named draw_circle that takes three parameters named x, y, and radius."</p>
+    <p>The function name must start with a letter or the underscore(_). The rest of the name must be made of letters, digits (0-9), or the underscore. A function name cannot include spaces or other punctuation. A function name should be meaningful and should 
+        describe briefly what the function does. Well-named functions often start with a verb.
+    </p>
+    <p>The statement inside a function are called the body of the function. Just like other block statements in Python, such as if, else, while, and for, all of which end with a colon (:), you must indent the statements inside the body of a function. The body 
+        of a function should begin with a documentation string which is a triple quoted string that describes the function's purpose, parameters and return value. The body of a function may contain as many statements as you wish to write inside of it. However, 
+        it is a good idea to limit functions to less than 20 lines of code.
+    </p>
+    <p>Example 1 contains a function named "print_cylinder_volume()" with no parameters that gets two numbers from the user: radius and height and uses those numbers to compute the volume of a right circular cylinder and then prints the colume for the user to see.</p>
+    <img class="radial-cylinder" src="images/radial-cylinder.png" alt="radial cylinder example">
+    <p>Because the "print_cylinder_volume" function in example 1 doesn't accept parameters, it must be called without any arguments like this:</p>
+    <img class="radial-function" src="images/radial-function.png" alt="radial functions">
+    <h2>How to Make a User-Deinfed Function Reusable</h2>
+    <p>Because the "print_cylinder_volume" function in example 1 gets input from a user and prints its result to a terminal window, it can be used only in a program that runs when a user is present. It cannot be used in a program that runs automatically and gets input from a 
+        file or the network or a sensor. In other words, the "print_cylinder_volume" in example 1 is not reusable in other programs. The most reusable functions are ones that take parameters, perform calculations, and return a result but do not perform user input and output.
+    </p>
+    <p>The parameter list in a function's header contains data stored in variables that the function needs to complete its task. A parameter is a variable whose value comes from outside the function. One way to get input into a function is to ask the user for input by calling 
+        the built-in Python input function. Another way to get input into a function is through the functions parameters. Getting input through parameters is much more flexible than asking the user for input because the input through parameters can come from the user or a file 
+        on a hard drive or the network or a sensor or even another function.
+    </p>
+    <p>Example 2 contains another version of the "print_cylinder_volume" function. This second version doesn't get the radius and height from the user. Instead, it gets input through its two parameters named radius and height.</p>
+    <img class="radius-height" src="images/radius-height.png" alt="radius and height example">
+    <p>Because the second version of the "print_cylinder_volume" function accepts two parameters, it must be called with two arguments like this:</p>
+    <img class="cylinder-volume" src="images/cylinder-volume.png" alt="cylinder volume example">
+    <p>To return a result from a function, simply type the keyword "return" followed by whatever result you want returned to the calling function. Example 3 contains a thirds version of the cylinder volume function. Notice that the version in example 3 returns the volume instead 
+        of printing it, which makes the function more reusable. Notice also in example 3 that we changed the name of the function from "print_cylinder_volume" to "compute_cylinder_volume" because this version doesn't print the volume but instead returns it.</p>
+    <img class="volume" src="images/volume.png" alt="volume example">
+    <p>Many functions that you've used in the past such as input, float, and round, return a result. When a function returns a result, we usually write code to store that returned result in a variable to use later in the program like this:</p>
+    <img class="image-input" src="images/image-input.png" alt="image input example">
+    <p>Because the "compute_cylinder_volume" function in example 3 accepts two parameters and returns a result, it could be called like this:</p>
+    <img class="compute-cylinder" src="images/compute-cylinder.png" alt="compute cylinder example">
+    <h2>The main User-Defined Function</h2>
+    <p>In a large program, writing statments outside a function can lead to poor organization. Professional software developers write statements inside a function whenever possible.</p>
+    <p>Example 5 contains the same Python program as example 4 except most of the statements are inside a user-defined function named main.</p>
+    <img class="define-main" src="images/define-main.png" alt="defined main example">
+    <p>Notice the call to the main function in example 5 at line 19. Without that call to the main function, when we run the program, the program will do nothing.</p>
+    <h2>A Complete Program with User-Defined Functions</h2>
+    <p>If you look closely at the code in examples 1 and 5, you will realize that both programs have the same problem, namely both the "print_cylinder_volume" function in example 1 and the "main" function in example 5 are not reusable because both of them get input from a user and 
+        print to a terminal window.  A better way to write the program in examples 1 and 5 is to separate the program into two functions, one named main and one named compute_cylinder_volume as shown in example 6.</p>
+    <p>Example 6 contains a complete program with two functions, the first named main at line 6 and the second named "compute_cylinder_volume" at line 20. At line 13, the "main" function calls the "compute_cylinder_volume" function. Notice that the compute_cylinder_volume function gets 
+        its input through parameters and returns a result which makes this function reusable in other programs, including programs that run automatically without a user.
+    </p>
+    <img class="volume-hieght" src="images/volume-height.png" alt="volume height example">
+    <img class="volume-height-output" src="images/volume-height-output.png" alt="example 6 output">
+    <p>The most reusable functions are ones that have parameters, perform calculations, and return a result but do not perform user input and output. In the previous code example, there are two functions named main and computer_cylinder_volume. The main function is certainly useful in the 
+        program, but it is not reusable in other programs because it gets user input and prints the result for the user to see. The compute_cylinder_volume function is very reusable in another program because it doesn't get user input or print output. Instead, it takes two parameters, 
+        performs a calculation, and returns a result to the calling function. The compute_cylinder_volume function is so reusuable that it could be included in a library of functions that compute the area and volume of 2-D and 3-D geometric shapes.
+    </p>
+    <h2>What Happens When the Computer Calls a Function?</h2>
+    <p>Some students have trouble visualizing what happens when the computer calls (executes) a function. The following diagram contains the same program as example 6. The circled numbers show the order in which the events happen in the computer. The green numbers and arrows in the diagram 
+        show the order in which the computer executes statements in the program. The blue numbers and arrows show how data flows from arguments into parameters and from a returned result to a variable.
+    </p>
+    <img class="computer-compute" src="images/computer-compute.png" alt="computer compute example">
+    <li>
+        <ul>A. The statement at (1) is not inside a function, so the computer executes it when the program begins. The statement at (1) is a call to the main function which causes the computer to begin executing the statements inside main at (2).</ul>
+        <ul>B. At (2), the computer gets two numbers from the user.</ul>
+        <ul>C. The statement at (3) is a call to the compute_cylinder_volume function which causes the computer to copy the values in the arguments r and h into the parameters radius and height respectively and then begin executing the statements inside the compute_cylinder_volume function at (5).</ul>
+        <ul>D. At (5), the computer computes the volume of a cylinder.</ul>
+        <ul>E. The statement at (6) is a return statement which causes the computer to stop executing the compute_cylinder_volume function, to return the computed volume to the call point at (3), and to resume executing statements at the call point.</ul>
+        <ul>F. At the call point (3), the computer stores the returned value in the variable named v.</ul>
+        <ul>G. At (8), the computer prints the value that is in the volume variable for the user to see. This is the last statement in the main function, so after executing it, the computer resumes executing the statements after the call point (1) to main.</ul>
+        <ul>H. At (9), there are no more statements after the call to main, so the computer terminates the program.</ul>
+    </li>
+    <h2>Call Graphs</h2>
+    <p>A call graph is a diagram shows function calls and returns within a program. A call graph can help you visualize how a program is divided into functions. Within a call graph, the unfilled circle shows where the computer begins executing a program. A rounded rectangle represents a function. 
+        A solid arrow represents a call from one function to another function. A dashed arrow represents a value returned from a called function to the calling function.
+    </p>
+    <p>The call graph below shows the function calls and returns for the program in example 6. From the call graph, we see that the computer begins executing the program by calling the main function. While executing the main function, the computerr calls the input and float functions. Finally the computer 
+        calls the compute_cylinder_volume function. Finally the computer calls the print function. In the call graph we can see that the main and print functions don't return a value. The print function prints results for the user to see, but it doesn't return anything.
+    </p>
+    <img class="call-graph" src="images/call-graph.png" alt="call graph image">
+</body>
+</html>
