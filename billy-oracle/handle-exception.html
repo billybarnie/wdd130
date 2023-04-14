@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling Exceptions</title>
+</head>
+<body>
+    <h1>Tutorials</h1>
+    <section>
+        <nav>
+            <p>Python Exceptions: <a href="https://realpython.com/python-exceptions/">An Introduction</a></p>
+        </nav>
+        <nav>
+            <p>Official Python Errors: <a href="https://docs.python.org/3/tutorial/errors.html">Errors and Exceptions tutorial</a></p>
+        </nav>
+        <nav>
+            <a href="https://realpython.com/the-most-diabolical-python-antipattern/">Diabolical Python Antipattern</a>
+        </nav>
+    </section>
+    <h1>Videos</h1>
+    <section>
+        <nav>
+            <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/python-for-beginners-17-of-44-error-handling">Error Handling Concepts</a>
+        </nav>
+        <nav>
+            <a href="https://learn.microsoft.com/en-us/shows/intro-to-python-development/python-for-beginners-18-of-44-demo-error-handling">Error Handling Demonstration</a>
+        </nav>
+        <nav>
+            <a href="https://realpython.com/python-traceback/">Python Traceback</a>
+        </nav>
+    </section>
+    <h2>What is an Exception</h2>
+    <p>An exception is a relatively rare event that sometimes occurs while a program is running. For example, an exception occurs when a Python program tries to open a file for reading but that file doesn't exist. There are many 
+        different <a href="https://docs.python.org/3/library/exceptions.html">built-in exceptions</a> that may occur while a Python program is running.</p>
+    <p>When an exceptional event occurs, a Python function raises an exception which may be handled by code at another location in the executing Python program. The Python keyword to raise an exception is raise. Normally, you will 
+        not need to write code to raise an exception because the built-in functions, such as open, int, and float, will raise an exception when necessary. You will need to write code in your programs to handle exceptions.
+    </p>
+    <h2>How to Handle an Exception</h2>
+    <p>The Python keywords to handle exceptions are try, except, else, and finally. The following example code contains the outline of a complete try-except-else-finally block. Read the code and its comments carefully to understand 
+        the correct syntax and organization of a try-except-else-finally block.
+    </p>
+    <img class="except-1" src="images/except-1.png" alt="example 1 of exceptions">
+    <p>As shown in example 1 above, when we want to write code that will handle exceptions, we first write a try block, and we put into that try block the normal code that might cause an exception. The we write except blocks to handle 
+        the exceptions. Each except block may handle one type of exception like the code at line 9:
+    </p>
+    <img class="0-error" src="images/0-error.png" alt="0 error sample syntax">
+    <p>Or each except block may handle several types of exceptions, like the code at line 15:</p>
+    <img class="key-error" src="images/key-error.png" alt="key error sample syntax">
+    <p>Or one except block may handle all possible types of exceptions, like the code at line 19:</p>
+    <img class="except-except" src="images/except-except.png" alt="exception sample syntax">
+    <p>Or a bare except block may handle anything that can be raised, including SystemExit, KeyboardInterrupt and GeneratorExit, like the code at line 23:</p>
+    <img class="except-block" src="images/except-block.png" alt="except block sample syntax">
+    <p>The Python programming language requires us to order except blocks from most specific at the top to least specific (most general) at the bottom. However, im most programs, it is a bad idea to write except blocks that are very 
+        general, including an except block that handles all possible exception types (line 19) and a bare except block (line 23).</p>
+    <p>In a Python program, it is usually a bad idea to write an except block that handles all types of exceptions or a bare except block because such a block will handle SyntaxError. Normally, a program should not handle SyntaxError. 
+        Normally, a program should not handle SyntaxError. Instead, a program should crash for a syntax error and print the line number where the syntax error occurred so that a programmer can find and fix the syntax error. Syntax errors 
+        are caused by a programmer mistyping code and not by bad user input or missing files. A programmer should find and fix all syntax errors in a program before the program is given to users, so there is no reason to handle syntax errors 
+        in an except block.
+    </p>
+    <p>As shown at line 27 in example one above, following the except blocks, a programmer may write an optional else block which the computer will execute if the try block does not raise any exceptions. However, it is uncommon to write an 
+        else block for try and except blocks because any code that ould be written in an else block of try and except could also be written at the end of the try block. Professional programmers almost never write an else block for try and except 
+        blocks.</p>
+    <p>As shown at line 31 in example 1 above, at the end of the exception handling code, a programmer may write an optional finally block. The finally block contains code that the computer executes after all the other code in the try, except, and else 
+        blocks regardless of whether an exception was raised or not. The code in the finally block usually contains "clean up" code that frees resources that the code in the try block used.
+    </p>
+    <h1>Common Exception Types</h1>
+    <p>There are many different types of <a href="https://docs.python.org/3/library/exceptions.html">built-in exceptions</a> that may occur while a Python program is running. This section shows how seven types of exceptions may occur.</p>
+    <h2>TypeError</h2>
+    <p>The computer raises a <a href="https://docs.python.org/3/library/exceptions.html#TypeError">TypeError</a> when the code that calls a function passes an argument with the wrong data type. The code in example 2 attempts to pass a string to the round 
+    function. This causes the computer to raise a TypeError because the round function cannot round a string to an integer. It can round only a number to an integer. The output below example 2 shows that the computer raised a TypeError.</p>
+    <img class="typeerror" src="images/typeerror.png" alt="type error example">
+    <h2>ValueError</h2>
+    <p>The computer raises a <a href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a> when the code that calls a function passes an arguemtn with the correct data type but with an invalid value. A common event that causes the 
+    computer to raise a ValueError is when the int function or float function tries to convert a string to a number but the string contains characters that are not digits. The code in example 3 and its output show a ValueError.</p>
+    <img class="valueerror" src="images/valueerror.png" alt="value error example">
+    <h2>ZeroDivisionError</h2>
+    <p>The computer raises a <a href="https://docs.python.org/3/library/exceptions.html#ZeroDivisionError">ZeroDivisionError</a> when a program attempts to divide a number by zero (0) as shown in example 4 and its output.</p>
+    <img class="zeroerror" src="images/zeroerror.png" alt="zero division error example">
+    <h2>IndexError</h2>
+    <p>Recall that each element in a list is store at a unique index and that an index is always an integer. If we write code that tries to use an index that doesn't exist in a list, when the computer executes that code, the computer will raise an 
+        <a href="https://docs.python.org/3/library/exceptions.html#IndexError">IndexError</a>. The program in example 5 creates a list that contains three surnames. Then the program attempts to change the surname at index 3. Of course, the list contains only three elements, 
+        and the index of the last element is 2, so the statment fails and causes the computer to raise an IndexError.
+    </p>
+    <img class="indexerror1" src="images/indexerror.png" alt="first example of an index error">
+    <p>The program in example 6 is similar to example 5, and both programs cause the computer the raise an IndexError. The program in example 6 creates a list that contains three surnames. Then the program attempts to print the surname at index 3. Of course, this 
+        statement fails because the list contains only three elements, and the index of the last element is 2.
+    </p>
+    <img class="indexerror2" src="images/indexerror1.png" alt="second example of a index error">
+    <h2>KeyError</h2>
+    <p>As shown in example 7, if we write code that attempts to find a key in a dictionary and that key doesn't exist in the dictionary, then the computer will raise a <a href="https://docs.python.org/3/library/exceptions.html#KeyError">KeyError</a>.</p>
+    <img class="keyerror1" src="images/keyerror.png" alt="fist example of a key error">
+    <p>Of course, it is very unlikely that programmer would write a program that ries to find a hard-coded key that is not in a dictionary. However, it is common for user to enter a key that in not in a dictionary.</p>
+    <img class="keyerror2" src="images/keyerror1.png" alt="second example of a key error">
+    <h2>FileNotFoundError</h2>
+    <p>If we write a call to the open function that attempts to open a file for reading and that file doesn't exist, the computer will raise a <a href="https://docs.python.org/3/library/exceptions.html#FileNotFoundError">FileNotFoundError</a>. Example 8 contains code where 
+    such an error might occur.</p>
+    <img class="nofile" src="images/nofile.png" alt="file not found error example">
+    <h2>PermissionError</h2>
+    <p>Nearly all computer operating systems, such as Mircosoft Windows, Mac OS X, and Linux, allow multiple people to use a single computer. Because people need to store private data in files on a computer, the operating systems implement file access permission rules. These rules help to 
+        prevent unauthorized access to files.
+    </p>
+    <p>If we write a call to the open function that attempts to open a file and the person executing our program doesn't have permission to access the file, the computer will raise a <a href="https://docs.python.org/3/library/exceptions.html#PermissionError">PermissionError</a>. 
+    Example 9 contains code where such an error might occur.</p>
+    <img class="permerror" src="images/permerror.png" alt="permission error example">
+    <h2>Example: Arithmetic</h2>
+    <p>Example 10 contains a complete program with except blocks to handle two types of exceptions: ValueError and ZeroDivisionError.</p>
+<img class="arithmetic" src="images/arithmetic.png" alt="arithmetic example">
+</body>
+</html>
