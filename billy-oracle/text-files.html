@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Files</title>
+</head>
+<body>
+    <h2>Text Files</h2>
+    <p>In order to read data from a text file, the file must exist on one of the computer's drives, and your program must do these three things:</p>
+    <li>
+        <ul>Open the file for reading text</ul>
+        <ul>Read from the file, usually one line of text at a time</ul>
+        <ul>Close the file</ul>
+    </li>
+    <p>The built-in <a href="https://docs.python.org/3/library/functions.html#open">open function</a> opens a file for reading or writing. Here is an excerpt from the official documentation for the open function:</p>
+    <img class="open-file" src="images/open-file.png" alt="excerpt image">
+    <p>Example 1 contains a program that opens a text file named plants.txt for reading at line 26. At line 30 there is a for loop that reads the text in the file one line at a time and repeats the body of the for loop once once for each line 
+        of text in the file. in the body of the for loop at lines 32-38, the code removes surrounding white space, if there os any, from each line of text and then stores each line of text in a list.
+    </p>
+    <img class="example-1" src="images/example-1.png" alt="example 1 image">
+    <img class="example-1-out" src="images/example-1-out.png" alt="example one image output">
+    <p>After the body of a for loop that reads from a file, we can write a call to the file.close method. However, when calling the open function, most programmers use a with block as shown in example 1 at line 26 and nest the for loop inside 
+        the with block as shown at lines 30-38. When the with block ends, the computer will automatically close the file, so that the programmer doesn't have to write a call to the file.close method.
+    </p>
+    <h2>CSV Files</h2>
+    <p>Many computer systems import and export data in CSV files. CSV is an acronym for comma separated values. A CSV file is a text file that contains tabular data with each row on a separate line of the file and each cell (column) separated 
+        by a comma. The following example show the contents of a CSV file named "hymns.csv" that stores data about religious songs. Notice that the first row of the file contains column headings, the next four rows contain data about four hymns, 
+        and each row contains three columns separated by commas.
+    </p>
+    <img class="csv-file" src="images/csv-file.png" alt="csv file example">
+    <p>Python has a standard <a href="https://docs.python.org/3/library/csv.html">module named csv</a>that includes functionality to read from and write to CSV files. The program in example 2 shows how to open a CSV file and use the csv module to read 
+    the data and print it to a terminal window. In example 2 at line 8, there is a call to the Python built-in open function, which opens the hymns.csv file for reading. At line 12, the program creates a csv.reader object that will read from the 
+    hymns.csv file. Within the for loop at lines 16 and 17 the csv.reader reads and prints each row from the CSV file.</p>
+    <img class="csv-reader" src="images/csv-reader.png" alt="csv reader example with output">
+    <p>When a csv.reader reads a row from a CSV file, the reader returns the row as a list of strings. The output from example 2 shows that a csv.reader returns a list of strings. In the output, notice the five lists of strings, (strings surrounded by 
+        square brackets [...]) that were printed by the print statement at line 17. Notice also that the reader reads all the rows from a CSV file, including the first row, which contains column headings.</p>
+    <h2>Processing Each Row in a CSV File</h2>
+    <p>After reading each row from a CSV file, the for loop in the previous example simply prints the row list to a terminal window. Of course, a for loop can tdo much more than simply print each row. Consider the following CSV file named "dentists.csv" 
+        that stores data about dental offices. Notice that the first row of the file contains column headings, the next four rows contain data about four dental offices, and each row contains five columns separated by commas.
+    </p>
+    <img class="csv-row" src="images/csv-row.png" alt="csv row example">
+    <p>The program in example 3 processes each row in the dentists.csv file to determine which dental office has the most patients per employee. Notice that the first row of the dentists.csv file contains column headings. The headings contain no numbers 
+        and aren't needed for the calculations, so the program skips the first row by calling the built-in next function at line 25.
+    </p>
+    <img class="line-25" src="images/line-25.png" alt="example 3 image">
+    <h2>Reading a CSV File into a Compound List</h2>
+    <p>The program in example 3 reads and processes each row in a CSV file. That program needs to access the data in each row once only. If a program needs to access the contents of a CSV file multiple times, the program can read the contents of the file 
+        into a compound list and then access the data from the list. The program in example 4 contains a function named read_compound_list that reads the contents of a CSV file into a compound list.
+    </p>
+    <img class="comp-list" src="images/comp-list.png" alt="example 4 image">
+    <h2>Reading a CSV File into a Compound Dictionary</h2>
+    <p>If the values in one of the columns of CSV file are unique, then a program can read the contents of a CSV file into a compound dictionary and then use the dictionary to quickly find data. Recall that each item in a dictionary is a key vallue pair. 
+        The values from teh unique column in a CSV file will be the keys in the dictionary. The program in example 5 shows how to read the data from a CSV file into a compound dictionary. Notice in example 5, because of lines 9, 14, 58, and 62, that the 
+        program uses the dental office phone numbers as the keys in the dictionary.
+    </p>
+    <img class="row-list-read" src="images/row-list-read.png" alt="example 5 image">
+</body>
+</html>
